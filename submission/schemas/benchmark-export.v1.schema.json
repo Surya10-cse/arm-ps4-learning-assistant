@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adapt-ai:benchmark-export:1",
+  "type": "object", "additionalProperties": false, "required": ["version","measurements"],
+  "properties": {
+    "version": {"const": 1},
+    "measurements": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id","createdAt","modelSha256","generationMs","firstTextMs","nativeStats","device","postGenerationPssKb","thermalStatus","loadMs","promptSha256","promptBytes","purpose","quantization","maxSequenceTokens","outputCharacterLimit","temperature"],
+      "properties": {
+        "id": {"type": "string"},"createdAt": {"type": "integer"},"device": {"type": "string"},
+        "modelSha256": {"type": "string","pattern": "^[a-f0-9]{64}$"},"promptSha256": {"type": "string","pattern": "^[a-f0-9]{64}$"},
+        "generationMs": {"type": "integer","minimum": 0},"firstTextMs": {"type": ["integer","null"],"minimum": 0},
+        "nativeStats": {"type": "object"},"postGenerationPssKb": {"type": "integer","minimum": 0},
+        "thermalStatus": {"type": "integer","minimum": -1},"loadMs": {"type": "integer","minimum": 0},
+        "promptBytes": {"type": "integer","minimum": 1,"maximum": 1600},
+        "purpose": {"enum": ["tutor","cold","warmup","measured"]},"quantization": {"enum": ["8da4w","int8","unknown"]},
+        "maxSequenceTokens": {"const": 2048},"outputCharacterLimit": {"const": 6000},"temperature": {"const": 0.3}
+      }
+    }}
+  }
+}

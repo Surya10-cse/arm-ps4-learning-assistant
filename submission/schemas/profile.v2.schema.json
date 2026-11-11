@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adapt-ai:profile:2",
+  "type": "object", "additionalProperties": false,
+  "required": ["version","name","goal","dailyMinutes","experience","goalContext"],
+  "properties": {
+    "version": {"const": 2},
+    "name": {"type": "string","minLength": 1,"maxLength": 60},
+    "goal": {"enum": ["ANDROID","EDGE_AI","ML"]},
+    "dailyMinutes": {"type": "integer","minimum": 5,"maximum": 240},
+    "experience": {"enum": ["BEGINNER","INTERMEDIATE","EXPERIENCED"]},
+    "goalContext": {"type": "string","maxLength": 160}
+  }
+}

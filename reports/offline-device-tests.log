@@ -1,0 +1,218 @@
+
+C:\Personalised_Learning_Assistant>if "Windows_NT" == "Windows_NT" setlocal
+
+C:\Personalised_Learning_Assistant>set DIRNAME=C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\bin\ 
+
+C:\Personalised_Learning_Assistant>if "C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\bin\" == "" set DIRNAME=. 
+
+C:\Personalised_Learning_Assistant>set APP_BASE_NAME=gradle 
+
+C:\Personalised_Learning_Assistant>set APP_HOME=C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\bin\.. 
+
+C:\Personalised_Learning_Assistant>for %i in ("C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\bin\..") do set APP_HOME=%~fi 
+
+C:\Personalised_Learning_Assistant>set APP_HOME=C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1 
+
+C:\Personalised_Learning_Assistant>set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m" "-javaagent:C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1/lib/agents/gradle-instrumentation-agent-8.11.1.jar" 
+
+C:\Personalised_Learning_Assistant>if defined JAVA_HOME goto findJavaFromJavaHome 
+
+C:\Personalised_Learning_Assistant>set JAVA_HOME=C:\Personalised_Learning_Assistant\.tools\jdk\jdk-21.0.7 
+
+C:\Personalised_Learning_Assistant>set JAVA_EXE=C:\Personalised_Learning_Assistant\.tools\jdk\jdk-21.0.7/bin/java.exe 
+
+C:\Personalised_Learning_Assistant>if exist "C:\Personalised_Learning_Assistant\.tools\jdk\jdk-21.0.7/bin/java.exe" goto execute 
+
+C:\Personalised_Learning_Assistant>set CLASSPATH=C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\lib\gradle-gradle-cli-main-8.11.1.jar 
+
+C:\Personalised_Learning_Assistant>"C:\Personalised_Learning_Assistant\.tools\jdk\jdk-21.0.7/bin/java.exe" "-Xmx64m" "-Xms64m" "-javaagent:C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1/lib/agents/gradle-instrumentation-agent-8.11.1.jar"   "-Dorg.gradle.appname=gradle" -classpath "C:\Personalised_Learning_Assistant\.tools\gradle\gradle-8.11.1\lib\gradle-gradle-cli-main-8.11.1.jar" org.gradle.launcher.GradleMain :data:connectedDebugAndroidTest :app:connectedValidationAndroidTest --console=plain 
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin UP-TO-DATE
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :data:preBuild UP-TO-DATE
+> Task :data:preDebugBuild UP-TO-DATE
+> Task :data:generateDebugResValues UP-TO-DATE
+> Task :data:generateDebugResources UP-TO-DATE
+> Task :data:packageDebugResources UP-TO-DATE
+> Task :data:parseDebugLocalResources UP-TO-DATE
+> Task :data:generateDebugRFile UP-TO-DATE
+> Task :data:kspDebugKotlin UP-TO-DATE
+> Task :data:compileDebugKotlin UP-TO-DATE
+> Task :data:javaPreCompileDebug UP-TO-DATE
+> Task :data:compileDebugJavaWithJavac NO-SOURCE
+> Task :data:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :data:preDebugAndroidTestBuild UP-TO-DATE
+> Task :data:writeDebugAarMetadata UP-TO-DATE
+> Task :data:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :data:compileDebugLibraryResources UP-TO-DATE
+> Task :data:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :data:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :data:generateDebugAndroidTestResources UP-TO-DATE
+> Task :data:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :data:extractDeepLinksDebug UP-TO-DATE
+> Task :data:processDebugManifest UP-TO-DATE
+> Task :data:processDebugAndroidTestManifest UP-TO-DATE
+> Task :data:processDebugAndroidTestResources UP-TO-DATE
+> Task :data:kspDebugAndroidTestKotlin UP-TO-DATE
+> Task :data:compileDebugAndroidTestKotlin UP-TO-DATE
+> Task :data:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :data:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :data:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :data:compileDebugAndroidTestShaders NO-SOURCE
+> Task :data:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :data:mergeDebugShaders UP-TO-DATE
+> Task :data:compileDebugShaders NO-SOURCE
+> Task :data:generateDebugAssets UP-TO-DATE
+> Task :data:mergeDebugAssets UP-TO-DATE
+> Task :data:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :data:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :data:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :data:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :data:dexBuilderDebugAndroidTest UP-TO-DATE
+> Task :data:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :data:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :data:processDebugJavaRes UP-TO-DATE
+> Task :data:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :data:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :data:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :data:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :data:mergeProjectDexDebugAndroidTest UP-TO-DATE
+> Task :data:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :data:mergeDebugJniLibFolders UP-TO-DATE
+> Task :data:mergeDebugNativeLibs NO-SOURCE
+> Task :data:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :data:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :data:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :data:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :data:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :data:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :data:packageDebugAndroidTest UP-TO-DATE
+> Task :data:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+
+> Task :data:connectedDebugAndroidTest
+Starting 3 tests on RMX5116 - 16
+
+Finished 3 tests on RMX5116 - 16
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preValidationBuild UP-TO-DATE
+> Task :inference:preBuild UP-TO-DATE
+> Task :inference:preDebugBuild UP-TO-DATE
+> Task :inference:writeDebugAarMetadata UP-TO-DATE
+> Task :app:checkValidationAarMetadata UP-TO-DATE
+> Task :app:generateValidationResValues UP-TO-DATE
+> Task :inference:generateDebugResValues UP-TO-DATE
+> Task :inference:generateDebugResources UP-TO-DATE
+> Task :inference:packageDebugResources UP-TO-DATE
+> Task :app:mapValidationSourceSetPaths UP-TO-DATE
+> Task :app:generateValidationResources UP-TO-DATE
+> Task :app:mergeValidationResources UP-TO-DATE
+> Task :app:packageValidationResources UP-TO-DATE
+> Task :app:parseValidationLocalResources UP-TO-DATE
+> Task :app:createValidationCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksValidation UP-TO-DATE
+> Task :inference:extractDeepLinksDebug UP-TO-DATE
+> Task :inference:processDebugManifest UP-TO-DATE
+> Task :app:processValidationMainManifest UP-TO-DATE
+> Task :app:processValidationManifest UP-TO-DATE
+> Task :app:processValidationManifestForPackage UP-TO-DATE
+> Task :inference:compileDebugLibraryResources UP-TO-DATE
+> Task :inference:parseDebugLocalResources UP-TO-DATE
+> Task :inference:generateDebugRFile UP-TO-DATE
+> Task :app:processValidationResources UP-TO-DATE
+> Task :inference:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :inference:compileDebugKotlin UP-TO-DATE
+> Task :inference:javaPreCompileDebug UP-TO-DATE
+> Task :inference:compileDebugJavaWithJavac NO-SOURCE
+> Task :inference:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :app:compileValidationKotlin UP-TO-DATE
+> Task :app:javaPreCompileValidation UP-TO-DATE
+> Task :app:compileValidationJavaWithJavac NO-SOURCE
+> Task :app:bundleValidationClassesToCompileJar UP-TO-DATE
+> Task :app:preValidationAndroidTestBuild SKIPPED
+> Task :app:checkValidationAndroidTestAarMetadata UP-TO-DATE
+> Task :app:generateValidationAndroidTestResValues UP-TO-DATE
+> Task :app:mapValidationAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:generateValidationAndroidTestResources UP-TO-DATE
+> Task :app:mergeValidationAndroidTestResources UP-TO-DATE
+> Task :app:processValidationAndroidTestManifest UP-TO-DATE
+> Task :app:processValidationAndroidTestResources UP-TO-DATE
+> Task :app:compileValidationAndroidTestKotlin UP-TO-DATE
+> Task :app:javaPreCompileValidationAndroidTest UP-TO-DATE
+> Task :app:compileValidationAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:mergeValidationShaders UP-TO-DATE
+> Task :app:compileValidationShaders NO-SOURCE
+> Task :app:generateValidationAssets UP-TO-DATE
+> Task :inference:mergeDebugShaders UP-TO-DATE
+> Task :inference:compileDebugShaders NO-SOURCE
+> Task :inference:generateDebugAssets UP-TO-DATE
+> Task :inference:mergeDebugAssets UP-TO-DATE
+> Task :app:mergeValidationAssets UP-TO-DATE
+> Task :app:compressValidationAssets UP-TO-DATE
+> Task :app:checkValidationDuplicateClasses UP-TO-DATE
+> Task :app:desugarValidationFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexValidation UP-TO-DATE
+> Task :inference:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:dexBuilderValidation
+> Task :app:mergeLibDexValidation UP-TO-DATE
+> Task :inference:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :app:mergeValidationGlobalSynthetics UP-TO-DATE
+> Task :app:processValidationJavaRes UP-TO-DATE
+> Task :inference:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeValidationJavaResource UP-TO-DATE
+> Task :app:mergeValidationJniLibFolders UP-TO-DATE
+> Task :inference:mergeDebugJniLibFolders UP-TO-DATE
+> Task :inference:mergeDebugNativeLibs NO-SOURCE
+> Task :inference:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :app:mergeValidationNativeLibs UP-TO-DATE
+> Task :app:stripValidationDebugSymbols UP-TO-DATE
+> Task :app:validateSigningValidation UP-TO-DATE
+> Task :app:writeValidationAppMetadata UP-TO-DATE
+> Task :app:writeValidationSigningConfigVersions UP-TO-DATE
+> Task :app:mergeValidationAndroidTestShaders UP-TO-DATE
+> Task :app:compileValidationAndroidTestShaders NO-SOURCE
+> Task :app:generateValidationAndroidTestAssets UP-TO-DATE
+> Task :app:mergeValidationAndroidTestAssets UP-TO-DATE
+> Task :app:compressValidationAndroidTestAssets UP-TO-DATE
+> Task :app:checkValidationAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:desugarValidationAndroidTestFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexValidationAndroidTest UP-TO-DATE
+> Task :app:mergeLibDexValidationAndroidTest UP-TO-DATE
+> Task :app:dexBuilderValidationAndroidTest UP-TO-DATE
+> Task :app:mergeProjectDexValidationAndroidTest UP-TO-DATE
+> Task :app:mergeValidationAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :app:processValidationAndroidTestJavaRes UP-TO-DATE
+> Task :app:mergeValidationAndroidTestJavaResource UP-TO-DATE
+> Task :app:mergeValidationAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeValidationAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripValidationAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningValidationAndroidTest UP-TO-DATE
+> Task :app:writeValidationAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:packageValidationAndroidTest UP-TO-DATE
+> Task :app:createValidationAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :app:mergeProjectDexValidation
+> Task :app:packageValidation
+> Task :app:createValidationApkListingFileRedirect UP-TO-DATE
+
+> Task :app:connectedValidationAndroidTest
+Starting 8 tests on RMX5116 - 16
+
+RMX5116 - 16 Tests 1/8 completed. (0 skipped) (0 failed)
+
+> Task :app:connectedValidationAndroidTest
+
+ai.adapt.app.LocalRuntimeGateTest > realProvisionedLlamaExecutesAllFiveModesWithoutChangingMastery[RMX5116 - 16] [33mSKIPPED [0m
+
+Finished 9 tests on RMX5116 - 16
+
+BUILD SUCCESSFUL in 49s
+132 actionable tasks: 5 executed, 127 up-to-date
+
+C:\Personalised_Learning_Assistant>if 0 EQU 0 goto mainEnd 
+
+C:\Personalised_Learning_Assistant>if "Windows_NT" == "Windows_NT" endlocal

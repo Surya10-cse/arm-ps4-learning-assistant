@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="ai.adapt.app.LearnerJourneyTest" tests="8" failures="0" errors="0" skipped="1" time="17.209" timestamp="2026-11-11T06:06:29" hostname="localhost">
+  <properties>
+    <property name="device" value="RMX5116 - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="interruptedAssessmentResumesInsteadOfScoringTwice" classname="ai.adapt.app.LearnerJourneyTest" time="4.928" />
+  <testcase name="actualUiJourneyScoresAdaptsAndSurvivesActivityRecreation" classname="ai.adapt.app.LearnerJourneyTest" time="11.213" />
+  <testcase name="realProvisionedLlamaExecutesAllFiveModesWithoutChangingMastery" classname="ai.adapt.app.LocalRuntimeGateTest" time="0.018">
+    <skipped />
+  </testcase>
+  <testcase name="officialExecuTorchNativeLibraryInitializesOnArm64" classname="ai.adapt.app.LocalRuntimeGateTest" time="0.005" />
+  <testcase name="missingModelReportsActionableFailureWithoutGeneratingText" classname="ai.adapt.app.LocalRuntimeGateTest" time="0.006" />
+  <testcase name="traversalAndCoercedManifestVersionAreRejected" classname="ai.adapt.app.ModelImportTest" time="0.004" />
+  <testcase name="checksumFailureCannotReachRuntimeOrActivate" classname="ai.adapt.app.ModelImportTest" time="0.003" />
+  <testcase name="runtimeRejectionRollsBackPreparedFiles" classname="ai.adapt.app.ModelImportTest" time="0.004" />
+</testsuite>

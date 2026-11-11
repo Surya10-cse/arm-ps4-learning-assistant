@@ -1,0 +1,421 @@
+{
+  "version": 2,
+  "generatedAt": "2026-11-11T11:44:35+05:30",
+  "host": [
+    {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.core.AnalyticsTest",
+      "file": "core\\build\\test-results\\test\\TEST-ai.adapt.core.AnalyticsTest.xml",
+      "cases": [
+        {
+          "name": "emptyAnalyticsNeverInventsAccuracyOrAssessedSkills",
+          "class": "ai.adapt.core.AnalyticsTest",
+          "status": "PASS"
+        },
+        {
+          "name": "currentGoalAndLocalDayScopeEvidence",
+          "class": "ai.adapt.core.AnalyticsTest",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.core.LearningTest",
+      "file": "core\\build\\test-results\\test\\TEST-ai.adapt.core.LearningTest.xml",
+      "cases": [
+        {
+          "name": "revisionFailureResetsIntervalAndIsDueNextDay",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "chanceCorrectionUsesActualOptionCount",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "correctEvidenceIncreasesMasteryWithoutCertainty",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "repeatedCorrectEvidenceUnlocksPrerequisiteButTutorCannot",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "focusedPracticeCanExploreSkillsOutsideCurrentGoal",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "learningJourneyAdaptsRoadmap",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "earlyPracticeDoesNotArtificiallyStretchRecallInterval",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "dueMasteredSkillGetsReviewActivity",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "wrongEvidenceNeverIncreasesAnyValidPrior",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "malformedGraphsAreRejected",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "selectorDoesNotRepeatWithinSessionAndTerminates",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "previouslySeenItemsAreDeferredAcrossSessions",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "roadmapRespectsTimeAndPrerequisites",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "minimumBudgetStillHasAnActionableStudyChunk",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "incorrectEvidenceReducesEstablishedMastery",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "focusedQuestionDifficultyTracksObservedMastery",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "goalsIncludeTransitivePrerequisites",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        },
+        {
+          "name": "dueReviewSurvivesADecliningPrerequisite",
+          "class": "ai.adapt.core.LearningTest",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.core.TutorTest",
+      "file": "core\\build\\test-results\\test\\TEST-ai.adapt.core.TutorTest.xml",
+      "cases": [
+        {
+          "name": "everyModeBuildsBoundedPromptWithContext",
+          "class": "ai.adapt.core.TutorTest",
+          "status": "PASS"
+        },
+        {
+          "name": "learnerCannotInjectChatDelimiters",
+          "class": "ai.adapt.core.TutorTest",
+          "status": "PASS"
+        },
+        {
+          "name": "multilingualContextIsBudgetedWithoutBreakingUnicode",
+          "class": "ai.adapt.core.TutorTest",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.inference.TutorJsonTest",
+      "file": "inference\\build\\test-results\\testDebugUnitTest\\TEST-ai.adapt.inference.TutorJsonTest.xml",
+      "cases": [
+        {
+          "name": "rejectsTrailingTextAndMultipleDocuments",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        },
+        {
+          "name": "refusesCoercedVersionAndOversizedFields",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        },
+        {
+          "name": "refusesMasteryActionsAndUnknownFields",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        },
+        {
+          "name": "refusesJsonExtensionsAndDuplicateFields",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        },
+        {
+          "name": "supportsEscapedUnicodeAndRejectsUnpairedSurrogates",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        },
+        {
+          "name": "parsesTeachingDocument",
+          "class": "ai.adapt.inference.TutorJsonTest",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.data.HostRepositoryTest",
+      "file": "data\\build\\test-results\\testDebugUnitTest\\TEST-ai.adapt.data.HostRepositoryTest.xml",
+      "cases": [
+        {
+          "name": "concurrentDoubleSubmitAppliesEvidenceOnlyOnce",
+          "class": "ai.adapt.data.HostRepositoryTest",
+          "status": "PASS"
+        },
+        {
+          "name": "scoredJourneyAdaptsAndPersistsWhileChatDoesNotChangeMastery",
+          "class": "ai.adapt.data.HostRepositoryTest",
+          "status": "PASS"
+        },
+        {
+          "name": "invalidAnswerLeavesAllEvidenceTablesUntouched",
+          "class": "ai.adapt.data.HostRepositoryTest",
+          "status": "PASS"
+        },
+        {
+          "name": "staleSessionCannotBeResurrectedAfterGoalChange",
+          "class": "ai.adapt.data.HostRepositoryTest",
+          "status": "PASS"
+        },
+        {
+          "name": "activeAssessmentResumesWithAuthoritativeNextQuestion",
+          "class": "ai.adapt.data.HostRepositoryTest",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "device": [
+    {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "name": "ai.adapt.data.MigrationTest",
+      "file": "data\\build\\outputs\\androidTest-results\\connected\\debug\\TEST-RMX5116 - 16-_data-.xml",
+      "cases": [
+        {
+          "name": "versionOneLearnerAndEvidenceSurviveVersionTwoUpgrade",
+          "class": "ai.adapt.data.MigrationTest",
+          "status": "PASS"
+        },
+        {
+          "name": "invalidChoiceRollsBackAllLearningWrites",
+          "class": "ai.adapt.data.RepositoryTest",
+          "status": "PASS"
+        },
+        {
+          "name": "answerIsAtomicIdempotentAndDurableAcrossReopen",
+          "class": "ai.adapt.data.RepositoryTest",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "name": "ai.adapt.app.LearnerJourneyTest",
+      "file": "app\\build\\outputs\\androidTest-results\\connected\\validation\\TEST-RMX5116 - 16-_app-.xml",
+      "cases": [
+        {
+          "name": "interruptedAssessmentResumesInsteadOfScoringTwice",
+          "class": "ai.adapt.app.LearnerJourneyTest",
+          "status": "PASS"
+        },
+        {
+          "name": "actualUiJourneyScoresAdaptsAndSurvivesActivityRecreation",
+          "class": "ai.adapt.app.LearnerJourneyTest",
+          "status": "PASS"
+        },
+        {
+          "name": "realProvisionedLlamaExecutesAllFiveModesWithoutChangingMastery",
+          "class": "ai.adapt.app.LocalRuntimeGateTest",
+          "status": "SKIPPED"
+        },
+        {
+          "name": "officialExecuTorchNativeLibraryInitializesOnArm64",
+          "class": "ai.adapt.app.LocalRuntimeGateTest",
+          "status": "PASS"
+        },
+        {
+          "name": "missingModelReportsActionableFailureWithoutGeneratingText",
+          "class": "ai.adapt.app.LocalRuntimeGateTest",
+          "status": "PASS"
+        },
+        {
+          "name": "traversalAndCoercedManifestVersionAreRejected",
+          "class": "ai.adapt.app.ModelImportTest",
+          "status": "PASS"
+        },
+        {
+          "name": "checksumFailureCannotReachRuntimeOrActivate",
+          "class": "ai.adapt.app.ModelImportTest",
+          "status": "PASS"
+        },
+        {
+          "name": "runtimeRejectionRollsBackPreparedFiles",
+          "class": "ai.adapt.app.ModelImportTest",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "python": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "debug": [
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.activity:activity-compose than 1.10.1 is available: 1.13.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.9.0 is available: 2.11.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.9.0 is available: 2.11.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.room:room-runtime than 2.7.1 is available: 2.8.5"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test:runner than 1.6.2 is available: 1.7.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test:core than 1.6.1 is available: 1.7.0"
+      },
+      {
+        "id": "ChromeOsAbiSupport",
+        "message": "Missing x86_64 ABI support for ChromeOS"
+      }
+    ],
+    "release": [
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.activity:activity-compose than 1.10.1 is available: 1.13.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.9.0 is available: 2.11.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.9.0 is available: 2.11.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.room:room-runtime than 2.7.1 is available: 2.8.5"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test:runner than 1.6.2 is available: 1.7.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0"
+      },
+      {
+        "id": "GradleDependency",
+        "message": "A newer version of androidx.test:core than 1.6.1 is available: 1.7.0"
+      },
+      {
+        "id": "ChromeOsAbiSupport",
+        "message": "Missing x86_64 ABI support for ChromeOS"
+      }
+    ]
+  },
+  "artifacts": {
+    "debug": {
+      "bytes": 41711551,
+      "sha256": "c9de892d7210dc03d80b0d69c01ecf8491d4f25427cd52aa001070df090e61be",
+      "signed": true,
+      "debuggable": true,
+      "metadata": "package: name='ai.adapt.app' versionCode='2' versionName='0.2.0' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'\nsdkVersion:'28'\ntargetSdkVersion:'35'\napplication-label:'ADAPT-AI'\nnative-code: 'arm64-v8a'",
+      "signatureVerification": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): false\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\n",
+      "noInternetPermission": true,
+      "arm64ExecuTorchPackaged": true
+    },
+    "release": {
+      "bytes": 34438136,
+      "sha256": "eb9e5b726d84e95e2ce7a8b0677952b7b4b7fba532a8aec2fe93e913891f0a85",
+      "signed": false,
+      "debuggable": false,
+      "metadata": "package: name='ai.adapt.app' versionCode='2' versionName='0.2.0' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'\nsdkVersion:'28'\ntargetSdkVersion:'35'\napplication-label:'ADAPT-AI'\nnative-code: 'arm64-v8a'",
+      "signatureVerification": "Unsigned candidate; external team signing required",
+      "noInternetPermission": true,
+      "arm64ExecuTorchPackaged": true
+    }
+  },
+  "catalogue": {
+    "skills": 8,
+    "questions": 64
+  }
+}

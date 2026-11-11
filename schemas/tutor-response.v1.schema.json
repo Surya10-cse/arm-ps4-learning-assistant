@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adapt-ai:tutor-response:1",
+  "type": "object", "additionalProperties": false,
+  "required": ["version", "title", "explanation", "exercise"],
+  "properties": {
+    "version": {"const": 1},
+    "title": {"type": "string", "minLength": 1, "maxLength": 120},
+    "explanation": {"type": "string", "minLength": 1, "maxLength": 6000},
+    "exercise": {"type": "string", "minLength": 1, "maxLength": 2000}
+  }
+}

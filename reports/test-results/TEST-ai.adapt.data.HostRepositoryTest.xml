@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.adapt.data.HostRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-11T05:58:02" hostname="LAPTOP-5M780VTE" time="23.772">
+  <properties/>
+  <testcase name="concurrentDoubleSubmitAppliesEvidenceOnlyOnce" classname="ai.adapt.data.HostRepositoryTest" time="20.784"/>
+  <testcase name="scoredJourneyAdaptsAndPersistsWhileChatDoesNotChangeMastery" classname="ai.adapt.data.HostRepositoryTest" time="1.543"/>
+  <testcase name="invalidAnswerLeavesAllEvidenceTablesUntouched" classname="ai.adapt.data.HostRepositoryTest" time="0.887"/>
+  <testcase name="staleSessionCannotBeResurrectedAfterGoalChange" classname="ai.adapt.data.HostRepositoryTest" time="0.178"/>
+  <testcase name="activeAssessmentResumesWithAuthoritativeNextQuestion" classname="ai.adapt.data.HostRepositoryTest" time="0.38"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

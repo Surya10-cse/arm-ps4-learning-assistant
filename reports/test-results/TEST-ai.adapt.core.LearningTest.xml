@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.adapt.core.LearningTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-11-11T06:03:30" hostname="LAPTOP-5M780VTE" time="0.06">
+  <properties/>
+  <testcase name="revisionFailureResetsIntervalAndIsDueNextDay" classname="ai.adapt.core.LearningTest" time="0.002"/>
+  <testcase name="chanceCorrectionUsesActualOptionCount" classname="ai.adapt.core.LearningTest" time="0.002"/>
+  <testcase name="correctEvidenceIncreasesMasteryWithoutCertainty" classname="ai.adapt.core.LearningTest" time="0.0"/>
+  <testcase name="repeatedCorrectEvidenceUnlocksPrerequisiteButTutorCannot" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="focusedPracticeCanExploreSkillsOutsideCurrentGoal" classname="ai.adapt.core.LearningTest" time="0.006"/>
+  <testcase name="learningJourneyAdaptsRoadmap" classname="ai.adapt.core.LearningTest" time="0.009"/>
+  <testcase name="earlyPracticeDoesNotArtificiallyStretchRecallInterval" classname="ai.adapt.core.LearningTest" time="0.0"/>
+  <testcase name="dueMasteredSkillGetsReviewActivity" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="wrongEvidenceNeverIncreasesAnyValidPrior" classname="ai.adapt.core.LearningTest" time="0.006"/>
+  <testcase name="malformedGraphsAreRejected" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="selectorDoesNotRepeatWithinSessionAndTerminates" classname="ai.adapt.core.LearningTest" time="0.016"/>
+  <testcase name="previouslySeenItemsAreDeferredAcrossSessions" classname="ai.adapt.core.LearningTest" time="0.007"/>
+  <testcase name="roadmapRespectsTimeAndPrerequisites" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="minimumBudgetStillHasAnActionableStudyChunk" classname="ai.adapt.core.LearningTest" time="0.0"/>
+  <testcase name="incorrectEvidenceReducesEstablishedMastery" classname="ai.adapt.core.LearningTest" time="0.0"/>
+  <testcase name="focusedQuestionDifficultyTracksObservedMastery" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="goalsIncludeTransitivePrerequisites" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <testcase name="dueReviewSurvivesADecliningPrerequisite" classname="ai.adapt.core.LearningTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

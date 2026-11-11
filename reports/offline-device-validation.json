@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "startedAt": "2026-11-11T06:05:39.408840+00:00",
+  "before": {
+    "airplane": "0",
+    "wifi": "0",
+    "bluetooth": "0"
+  },
+  "scope": "Actual-phone core learning and missing-model behavior. Real Llama generation remains blocked if runtime test is skipped.",
+  "during": {
+    "airplane": "1",
+    "wifi": "0",
+    "bluetooth": "0"
+  },
+  "testExitCode": 0,
+  "result": "PASS_CORE",
+  "after": {
+    "airplane": "0",
+    "wifi": "0",
+    "bluetooth": "0"
+  },
+  "restoreErrors": [],
+  "restored": true,
+  "finishedAt": "2026-11-11T06:06:30.956616+00:00"
+}

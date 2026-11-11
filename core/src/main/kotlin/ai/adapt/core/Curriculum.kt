@@ -1,0 +1,55 @@
+package ai.adapt.core
+
+/** Curated, versioned offline content; no generated questions affect scoring. */
+object Curriculum {
+    const val VERSION = 2
+    private fun relevance(a: Double, e: Double, m: Double) = mapOf(Goal.ANDROID to a, Goal.EDGE_AI to e, Goal.ML to m)
+    val skills = listOf(
+        Skill("logic","Programming foundations",emptySet(),10,0.2,relevance(0.8,0.8,0.8),"A variable stores a value. A branch selects a path. A loop repeats work. Trace a program one statement at a time and check boundary cases. Functions make inputs, outputs and responsibilities explicit."),
+        Skill("collections","Collections & complexity",setOf("logic"),12,0.4,relevance(0.8,0.8,0.8),"Lists preserve order. Sets enforce uniqueness. Hash maps offer average constant-time lookup, with collision-dependent worst cases. A nested full scan over n inputs often costs O(n²). Choose a structure based on operations and memory."),
+        Skill("kotlin","Kotlin & null safety",setOf("logic"),12,0.4,relevance(1.0,0.3,0.0),"Use val for a read-only reference and var for reassignment. Nullable types use ?. A safe call returns null for a null receiver; ?: supplies a fallback. !! can throw. Prefer immutable state and explicit types at boundaries."),
+        Skill("android","Android state & storage",setOf("kotlin","collections"),15,0.6,relevance(1.0,0.4,0.0),"Compose renders state. ViewModels survive configuration changes but not process death. Persist durable data in Room. Use transactions for related writes. Collect flows with lifecycle awareness. Keep blocking work off the main thread."),
+        Skill("probability","Probability & evidence",setOf("logic"),12,0.4,relevance(0.2,0.8,1.0),"Bayes rule combines a prior with likelihoods. Posterior odds equal prior odds times a likelihood ratio. A single correct guess does not prove mastery. Distinguish uncertainty in an estimate from evidence of low skill."),
+        Skill("ml","ML evaluation",setOf("probability","collections"),15,0.6,relevance(0.0,0.9,1.0),"Separate training, validation and test data. Fit preprocessing only on training data. Accuracy may hide class imbalance; precision measures correctness of positive predictions and recall measures recovered positives. Data leakage inflates results."),
+        Skill("tensors","Tensors & quantisation",setOf("ml"),15,0.7,relevance(0.0,1.0,0.8),"A tensor has shape, dtype and layout. Matrix multiplication contracts shared dimensions. INT4 weights reduce raw weight storage relative to FP32 by roughly eight times, before scales and metadata. Quantisation must be checked for quality loss."),
+        Skill("edge","ARM inference deployment",setOf("tensors","collections"),18,0.8,relevance(0.0,1.0,0.4),"Export a model using the runtime-compatible toolchain. PTE execution uses delegated operators and fallbacks. XNNPACK targets the CPU. Measure time to first token, decode throughput, peak memory and sustained thermals on actual hardware. NPU use requires a compatible backend and device support.")
+    )
+    private fun q(id: String, s: String, p: String, a: List<String>, c: Int, e: String, m: String, d: Double = 0.5) = Question(id,s,p,a,c,e,m,d)
+    private val baseQuestions = listOf(
+        q("logic-1","logic","x starts at 2. Repeat x = x + 3 twice. What is x?",listOf("5","8","10","6"),1,"Two updates give 2 → 5 → 8.","loop-trace",0.2),
+        q("logic-2","logic","Which input best checks the boundary of age >= 18?",listOf("Only 30","17 and 18","Only 1","20 and 40"),1,"17 fails and 18 passes at the threshold.","boundary-condition",0.3),
+        q("logic-3","logic","A pure function should return the same result for…",listOf("Any input","The same input, without side effects","Only positive inputs","The current clock"),1,"Pure functions depend on explicit input and do not change external state.","hidden-state",0.4),
+        q("logic-4","logic","A loop visits indices 0 until 3. How many visits?",listOf("2","3","4","0"),1,"The indices are 0, 1, 2; the upper bound is exclusive.","off-by-one",0.3),
+        q("collections-1","collections","Average lookup complexity of a well-behaved hash map?",listOf("O(n²)","O(n)","O(1)","O(n log n)"),2,"With distributed hashes and controlled load, lookup is average O(1).","hash-complexity",0.4),
+        q("collections-2","collections","Which collection naturally removes duplicate IDs?",listOf("List","Set","Queue","Stack"),1,"A set enforces uniqueness.","collection-choice",0.3),
+        q("collections-3","collections","Two nested loops each scan all n elements. Complexity?",listOf("O(n)","O(1)","O(log n)","O(n²)"),3,"n outer iterations times n inner iterations gives n² work.","nested-complexity",0.5),
+        q("collections-4","collections","Binary search requires which useful property?",listOf("Sorted order","All values equal","A hash function","Negative indices"),0,"Sorted order lets each comparison discard half the search interval.","search-precondition",0.5),
+        q("kotlin-1","kotlin","What does name?.length return when name is null?",listOf("0","null","An empty string","Always throws"),1,"A safe call skips evaluation and returns null.","nullable-safe-call",0.4),
+        q("kotlin-2","kotlin","val names = mutableListOf(1). Can names.add(2) work?",listOf("No, val freezes contents","Yes, val prevents reference reassignment","Only in Java","Only with !!"),1,"val fixes the reference; the referenced object can still be mutable.","val-immutability",0.5),
+        q("kotlin-3","kotlin","Which gives 0 when nullable count is null?",listOf("count!!","count ?: 0","count + null","count as Int"),1,"The Elvis operator supplies a fallback for null.","elvis-operator",0.4),
+        q("kotlin-4","kotlin","Which operation risks a null pointer exception?",listOf("name?.length","name ?: \"\"","name!!","name == null"),2,"!! asserts non-null and throws if the value is null.","unsafe-assertion",0.4),
+        q("android-1","android","What normally survives rotation but not process death?",listOf("A ViewModel alone","A local composable variable","A Thread alone","An Activity instance"),0,"A ViewModel is retained across configuration changes, not process death.","viewmodel-lifetime",0.6),
+        q("android-2","android","How should answer and mastery writes remain atomic?",listOf("Two unrelated launches","One Room transaction","A UI delay","A toast"),1,"A transaction commits related changes together or rolls them back.","atomic-persistence",0.5),
+        q("android-3","android","Where should blocking model generation run?",listOf("Main UI thread","A background dispatcher","Inside recomposition","Inside a color getter"),1,"Blocking inference would freeze rendering and input on the main thread.","main-thread-blocking",0.5),
+        q("android-4","android","What should drive a Compose screen?",listOf("Observable state","Manual pixel mutation","A global Activity reference","A blocking loop"),0,"Compose recomposes UI from observable state.","state-driven-ui",0.5),
+        q("probability-1","probability","A correct answer may be a guess. What follows?",listOf("Mastery must be 100%","Update confidence using evidence","Ignore every correct answer","Unlock all skills"),1,"Evidence changes a probability without proving certainty.","certainty-from-one-answer",0.4),
+        q("probability-2","probability","For independent fair coin flips, probability of two heads?",listOf("1/2","1/4","1","0"),1,"Multiply independent probabilities: 1/2 × 1/2 = 1/4.","independence",0.4),
+        q("probability-3","probability","Bayesian inference combines likelihood with…",listOf("Screen brightness","Prior belief","Only sample maximum","A random label"),1,"The prior and likelihood produce a posterior after normalization.","bayes-prior",0.5),
+        q("probability-4","probability","P(A)=0.2. What is P(not A)?",listOf("0.2","1.2","0.8","0"),2,"An event and its complement sum to 1.","complement",0.3),
+        q("ml-1","ml","When should a scaler be fitted?",listOf("On all data before splitting","On training data only","On test data only","On predictions only"),1,"Fitting on test data leaks held-out information.","data-leakage",0.6),
+        q("ml-2","ml","Recall is…",listOf("TP / (TP + FN)","TP / (TP + FP)","TN / all samples","Model size"),0,"Recall measures how many actual positives were found.","precision-recall-confusion",0.6),
+        q("ml-3","ml","99% negatives: always predicting negative gives 99% accuracy. Is that enough?",listOf("Yes, perfect model","No, inspect recall and class-specific metrics","No tests needed","Remove positives"),1,"Accuracy masks failure to detect the rare positive class.","imbalanced-accuracy",0.5),
+        q("ml-4","ml","Which set should guide hyperparameter choices?",listOf("Final test set repeatedly","Validation set","Production secrets","No data"),1,"Use validation for tuning and reserve a final test set for evaluation.","test-set-tuning",0.5),
+        q("tensors-1","tensors","(2 × 3) matrix times (3 × 4) matrix has shape…",listOf("2 × 4","3 × 3","4 × 2","2 × 3"),0,"Contract the shared dimension 3; keep outer dimensions 2 and 4.","matmul-shape",0.6),
+        q("tensors-2","tensors","Raw INT4 weights versus FP32 need roughly…",listOf("8 times less space","8 times more space","Identical space","No memory"),0,"4 bits instead of 32 gives 1/8 raw storage; scales and metadata add overhead.","quantisation-storage",0.6),
+        q("tensors-3","tensors","What must be checked after quantisation?",listOf("Only icon color","Quality and device performance","Only file name","Nothing"),1,"Smaller precision may affect quality; latency gains depend on supported kernels.","quantisation-guarantee",0.6),
+        q("tensors-4","tensors","A tensor dtype describes…",listOf("Element representation","Career goal","Network URL","Screen size"),0,"The dtype specifies how tensor elements are represented, such as float32 or int8.","tensor-dtype",0.4),
+        q("edge-1","edge","XNNPACK primarily targets which hardware?",listOf("CPU","Any NPU automatically","Cloud TPU","Storage controller"),0,"XNNPACK is a CPU inference backend.","backend-hardware",0.6),
+        q("edge-2","edge","What supports a real offline inference claim?",listOf("An attractive screenshot","Generation on the target phone in airplane mode","A cloud response","A guessed token rate"),1,"Verify actual local generation with radios disconnected and record evidence.","offline-proof",0.5),
+        q("edge-3","edge","Why measure sustained generation as well as one short run?",listOf("Thermal throttling may change performance","It changes the license","It removes RAM","It guarantees NPU use"),0,"Device heat and power policies can reduce sustained throughput.","thermal-performance",0.7),
+        q("edge-4","edge","A CPU benchmark proves NPU acceleration?",listOf("Always","Only if fast","No, backend execution needs separate evidence","Only with INT4"),2,"Quantisation or speed alone does not identify the executing backend.","acceleration-claim",0.7)
+    )
+    val questions=baseQuestions+ParallelQuestions.items
+    val graph = CompetencyGraph(skills)
+    val engine = LearningEngine(graph,questions)
+}

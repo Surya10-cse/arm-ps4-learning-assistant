@@ -1,0 +1,25 @@
+name: Android host validation
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - run: chmod +x gradlew
+      - run: ./gradlew :core:test :inference:testDebugUnitTest :data:testDebugUnitTest :app:assembleDebug :app:assembleRelease :app:lintDebug :app:lintRelease :data:assembleDebugAndroidTest :app:assembleValidationAndroidTest :core:exportCatalogue --console=plain
+      - run: python3 -m unittest discover -s tests -v
+      - uses: actions/upload-artifact@v4
+        with:
+          name: adapt-ai-host-validation
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/release/*.apk
+            data/build/outputs/apk/androidTest/debug/*.apk
+            **/build/reports/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.adapt.core.AnalyticsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-11T06:03:30" hostname="LAPTOP-5M780VTE" time="0.056">
+  <properties/>
+  <testcase name="emptyAnalyticsNeverInventsAccuracyOrAssessedSkills" classname="ai.adapt.core.AnalyticsTest" time="0.042"/>
+  <testcase name="currentGoalAndLocalDayScopeEvidence" classname="ai.adapt.core.AnalyticsTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

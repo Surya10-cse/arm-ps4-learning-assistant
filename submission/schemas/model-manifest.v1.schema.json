@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adapt-ai:model-manifest:1",
+  "type": "object", "additionalProperties": false,
+  "required": ["version","model","runtime","backend","contextLength","quantization","files","provenance"],
+  "properties": {
+    "version": {"const": 1}, "model": {"const": "Llama-3.2-1B-Instruct"},
+    "runtime": {"const": "1.0.0"}, "backend": {"const": "xnnpack"},
+    "contextLength": {"const": 2048}, "quantization": {"enum": ["8da4w","int8"]},
+    "files": {
+      "type": "object", "additionalProperties": false, "required": ["model.pte","tokenizer.model"],
+      "properties": {"model.pte": {"$ref": "#/$defs/artifact"},"tokenizer.model": {"$ref": "#/$defs/artifact"}}
+    },
+    "provenance": {"type": "object"}
+  },
+  "$defs": {"artifact": {"type": "object", "additionalProperties": false, "required": ["sha256","bytes"], "properties": {"sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},"bytes": {"type": "integer", "minimum": 1}}}}
+}

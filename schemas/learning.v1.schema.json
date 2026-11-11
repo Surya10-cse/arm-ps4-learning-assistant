@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adapt-ai:learning:1",
+  "description": "Versioned logical contracts. In-process calls use equivalent Kotlin types; these are export/integration definitions.",
+  "type": "object", "additionalProperties": false,
+  "required": ["version","kind","payload"],
+  "properties": {"version": {"const": 1},"kind": {"enum": ["profile","observation","mastery","activity"]},"payload": {"type": "object"}},
+  "allOf": [
+    {"if": {"properties": {"kind": {"const": "profile"}}},"then": {"properties": {"payload": {"$ref": "#/$defs/profile"}}}},
+    {"if": {"properties": {"kind": {"const": "observation"}}},"then": {"properties": {"payload": {"$ref": "#/$defs/observation"}}}},
+    {"if": {"properties": {"kind": {"const": "mastery"}}},"then": {"properties": {"payload": {"$ref": "#/$defs/mastery"}}}},
+    {"if": {"properties": {"kind": {"const": "activity"}}},"then": {"properties": {"payload": {"$ref": "#/$defs/activity"}}}}
+  ],
+  "$defs": {
+    "profile": {"type": "object","additionalProperties": false,"required": ["name","goal","dailyMinutes"],"properties": {"name": {"type": "string","minLength": 1,"maxLength": 60},"goal": {"enum": ["ANDROID","EDGE_AI","ML"]},"dailyMinutes": {"type": "integer","minimum": 5,"maximum": 240}}},
+    "observation": {"type": "object","additionalProperties": false,"required": ["sessionId","questionId","selectedIndex"],"properties": {"sessionId": {"type": "string","minLength": 1},"questionId": {"type": "string","minLength": 1},"selectedIndex": {"type": "integer","minimum": 0,"maximum": 5}}},
+    "mastery": {"type": "object","additionalProperties": false,"required": ["skillId","probability","attempts","correct"],"properties": {"skillId": {"type": "string"},"probability": {"type": "number","minimum": 0,"maximum": 1},"attempts": {"type": "integer","minimum": 0},"correct": {"type": "integer","minimum": 0}}},
+    "activity": {"type": "object","additionalProperties": false,"required": ["skillId","minutes","kind","reason","priority"],"properties": {"skillId": {"type": "string"},"minutes": {"type": "integer","minimum": 1},"kind": {"enum": ["LEARN","REVIEW"]},"reason": {"type": "string"},"priority": {"type": "number"}}}
+  }
+}

@@ -1,0 +1,16 @@
+test_empty_data_cannot_be_reported_as_a_benchmark (test_tooling.BenchmarkSummaryTests.test_empty_data_cannot_be_reported_as_a_benchmark) ... ok
+test_missing_native_stats_do_not_become_estimated_tokens (test_tooling.BenchmarkSummaryTests.test_missing_native_stats_do_not_become_estimated_tokens) ... ok
+test_nonfinite_native_values_cannot_become_performance_results (test_tooling.BenchmarkSummaryTests.test_nonfinite_native_values_cannot_become_performance_results) ... ok
+test_warmups_excluded_and_native_throughput_formula_used (test_tooling.BenchmarkSummaryTests.test_warmups_excluded_and_native_throughput_formula_used) ... ok
+test_android_memory_formats_and_missing_samples (test_tooling.DeviceMetricsTests.test_android_memory_formats_and_missing_samples) ... ok
+test_proc_cpu_fields_with_spaces_in_process_name (test_tooling.DeviceMetricsTests.test_proc_cpu_fields_with_spaces_in_process_name) ... ok
+test_all_schemas_are_valid_json (test_tooling.PackagingTests.test_all_schemas_are_valid_json) ... ok
+test_bundle_hashes_match_artifacts_and_contains_only_expected_entries (test_tooling.PackagingTests.test_bundle_hashes_match_artifacts_and_contains_only_expected_entries) ... ok
+test_missing_artifact_cannot_be_packaged (test_tooling.PackagingTests.test_missing_artifact_cannot_be_packaged) ... ok
+test_contiguous_unique_merge_ranks_are_required (test_tooling.TokenizerTests.test_contiguous_unique_merge_ranks_are_required) ... ok
+test_wrong_tokenizer_format_is_rejected (test_tooling.TokenizerTests.test_wrong_tokenizer_format_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.060s
+
+OK

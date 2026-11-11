@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "capturedAt": "2026-11-11T06:08:34.760396+00:00",
+  "before": {
+    "schemaVersion": 1,
+    "counts": {
+      "profiles": 1,
+      "answers": 3,
+      "mastery": 1,
+      "sessions": 1,
+      "messages": 0,
+      "misconceptions": 2,
+      "revisions": 1
+    },
+    "questionCount": 32
+  },
+  "after": {
+    "schemaVersion": 2,
+    "counts": {
+      "profiles": 1,
+      "answers": 3,
+      "mastery": 1,
+      "sessions": 1,
+      "messages": 0,
+      "misconceptions": 2,
+      "revisions": 1
+    },
+    "questionCount": 64
+  },
+  "learnerRowsPreserved": true,
+  "profileValuesLogged": false,
+  "install": "adb install -r",
+  "appStayedAlive": true
+}
